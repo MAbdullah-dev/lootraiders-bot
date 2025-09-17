@@ -1,0 +1,28 @@
+import { Events } from "discord.js";
+import { sendToLaravel } from "../services/laravelService.js";
+import { logger } from "../lib/logger.js";
+import { normalizePayload } from "../lib/normalizePayload.js";
+import { matchJoinTask } from "../services/taskService.js";
+import { handleLaravelResponse } from "../utils/responseHandler.js";
+
+export default {
+  name: Events.GuildMemberAdd,
+  async execute(member) {
+    try {
+      const joinTask = matchJoinTask();
+      if (!joinTask) return;
+
+      const payload = normalizePayload({
+        task: joinTask,
+        user: member.user,
+        context: { eventId: "guildMemberAdd" },
+      });
+
+      logger.info(payload, "Join task matched");
+      const res = await sendToLaravel(payload);
+      await handleLaravelResponse(message, res, task);
+    } catch (err) {
+      logger.error({ err: err.message }, "Error in GuildMemberAdd handler");
+    }
+  },
+};
