@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "_comment": "message task",
+    "id": "message_7",
+    "task_id": 7,
+    "type": "message",
+    "reward": 1,
+    "channelId": "1412604916140216361",
+    "match": "raffleentry"
+  },
+  {
+    "_comment": "reaction task",
+    "id": "reaction_8",
+    "task_id": 8,
+    "type": "reaction",
+    "reward": 1,
+    "messageId": "1417760247958994984",
+    "emoji": "👍"
+  },
+  {
+    "_comment": "role task",
+    "id": "role_9",
+    "task_id": 9,
+    "type": "role",
+    "reward": 1,
+    "roleId": "1412799811618340965"
+  },
+  {
+    "_comment": "attachment task",
+    "id": "attachment_10",
+    "task_id": 10,
+    "type": "attachment",
+    "reward": 1,
+    "channelId": "1412604916140216361"
+  },
+  {
+    "_comment": "reply task",
+    "id": "reply_11",
+    "task_id": 11,
+    "type": "reply",
+    "reward": 1,
+    "parentMessageId": "1417764189388275722"
+  },
+  {
+    "_comment": "thread task",
+    "id": "thread_12",
+    "task_id": 12,
+    "type": "thread",
+    "reward": 1,
+    "threadId": "1417764861646999603"
+  },
+  {
+    "_comment": "mention task",
+    "id": "mention_13",
+    "task_id": 13,
+    "type": "mention",
+    "reward": 1,
+    "channelId": "1412604916140216361"
+  },
+  {
+    "_comment": "live_event task",
+    "id": "live_event_14",
+    "task_id": 14,
+    "type": "live_event",
+    "reward": 1,
+    "channelId": "1412604916140216361"
+  }
+]

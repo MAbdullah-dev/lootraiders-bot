@@ -85,7 +85,7 @@ export async function fetchInitialTasks({
       );
       const res = await axios.get(url, {
         headers: {
-          "X-Bot-API-Key": config.tasksApiKey,
+          Authorization: `Bearer ${config.tasksApiKey}`,
         },
         timeout: 10_000, //10secs
       });
