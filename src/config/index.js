@@ -32,7 +32,7 @@ export const config = {
 	botSecret: requireEnv("BOT_SECRET"),
 	laravelApiUrl: requireEnv("LARAVEL_API_URL"),
 	tasksApiKey: requireEnv("DISCORD_BOT_TASKS_API_KEY"),
-	linkUrl: process.env.LINK_URL || "http://127.0.0.1:8000/auth/discord",
+	linkUrl: process.env.LINK_URL || "http://lootraiders.games/auth/discord",
 	get tasks() {
 		return tasks;
 	},
