@@ -48,6 +48,12 @@ export async function handleLaravelResponse(message, res, task) {
             .setURL(config.linkUrl)
         );
 
+        console.log('=== LINK URL DEBUG ===');
+        console.log('config.linkUrl:', config.linkUrl);
+        console.log('typeof linkUrl:', typeof config.linkUrl);
+        console.log('linkUrl length:', config.linkUrl?.length);
+        console.log('========================');
+
         try {
           if (message.author) {
             await message.author.send({ embeds: [embed], components: [row] });
